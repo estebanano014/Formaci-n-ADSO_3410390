@@ -6,9 +6,8 @@ void main(List<String> args) {
   double area;
 
   //Proceso
-  area = (base * altura) /2;
-  
+  area = (base * altura) / 2;
+
   //Salida
   print("El area del triangulo es: $area");
-
 }
