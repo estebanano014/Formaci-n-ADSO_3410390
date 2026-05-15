@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Herramienta Interactiva CSS</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:30px;
+    background:#111;
+    color:white;
+    font-family:Arial, sans-serif;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.contenedor{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.panel{
+    flex:1;
+    min-width:300px;
+    background:#1e1e1e;
+    padding:25px;
+    border-radius:15px;
+}
+
+.preview{
+    flex:1;
+    min-width:300px;
+    background:#1e1e1e;
+    padding:25px;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:500px;
+}
+
+label{
+    display:block;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+input,
+select{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.caja{
+    width:200px;
+    height:200px;
+    background:#3498db;
+    transition:all 0.3s ease;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.codigo{
+    background:black;
+    color:#00ff88;
+    padding:15px;
+    margin-top:30px;
+    border-radius:10px;
+    overflow:auto;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Herramienta Interactiva CSS</h1>
+
+<div class="contenedor">
+
+    <!-- CONTROLES -->
+    <div class="panel">
+
+        <label>Ancho</label>
+        <input type="range" id="ancho" min="50" max="500" value="200">
+
+        <label>Alto</label>
+        <input type="range" id="alto" min="50" max="500" value="200">
+
+        <label>Unidad CSS</label>
+        <select id="unidad">
+            <option value="px">px</option>
+            <option value="%">%</option>
+            <option value="vw">vw</option>
+            <option value="vh">vh</option>
+            <option value="em">em</option>
+            <option value="rem">rem</option>
+        </select>
+
+        <label>Formato de Color</label>
+        <select id="colorFormato">
+            <option value="#3498db">HEX</option>
+            <option value="rgb(231, 76, 60)">RGB</option>
+            <option value="rgba(46, 204, 113, 0.7)">RGBA</option>
+            <option value="hsl(280, 70%, 50%)">HSL</option>
+            <option value="hsla(35, 100%, 50%, 0.7)">HSLA</option>
+            <option value="oklch(0.7 0.18 240)">OKLCH</option>
+            <option value="tomato">Keyword</option>
+        </select>
+
+        <div class="codigo" id="codigoCSS">
+
+        </div>
+
+    </div>
+
+    <!-- VISTA -->
+    <div class="preview">
+
+        <div class="caja" id="caja">
+            CSS
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+const caja = document.getElementById("caja");
+
+const ancho = document.getElementById("ancho");
+const alto = document.getElementById("alto");
+const unidad = document.getElementById("unidad");
+const colorFormato = document.getElementById("colorFormato");
+
+const codigoCSS = document.getElementById("codigoCSS");
+
+function actualizarCaja(){
+
+    let w = ancho.value;
+    let h = alto.value;
+    let u = unidad.value;
+    let color = colorFormato.value;
+
+    caja.style.width = w + u;
+    caja.style.height = h + u;
+    caja.style.background = color;
+
+    codigoCSS.innerHTML = `
+.caja{
+    width: ${w}${u};
+    height: ${h}${u};
+    background: ${color};
+}
+    `;
+}
+
+ancho.addEventListener("input", actualizarCaja);
+alto.addEventListener("input", actualizarCaja);
+unidad.addEventListener("change", actualizarCaja);
+colorFormato.addEventListener("change", actualizarCaja);
+
+actualizarCaja();
+
+</script>
+
+</body>
+</html>

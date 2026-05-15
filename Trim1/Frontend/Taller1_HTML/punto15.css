@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    padding: 40px;
+}
+
+#caja-principal {
+    background: #111;
+    color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.caja-secundaria {
+    background: #2ecc71;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    font-size: 20px;
+}
