@@ -13,11 +13,11 @@ void main(List<String> arguments) {
   //proceso
   if (numero1 > numero2 && numero1 > numero3) {
     print("El mayor es: $numero1");
+  } else if (numero2 > numero3 && numero2 > numero1) {
+    print("El mayor es: $numero2");
+  } else if (numero3 > numero1 && numero3 > numero2) {
+    print("El mayor es: $numero3");
   } else {
-    if (numero2 > numero3) {
-      print("El mayor es: $numero2");
-    } else {
-      print("El mayor es: $numero3");
-    }
+    print("Los numeros son iguales");
   }
 }
