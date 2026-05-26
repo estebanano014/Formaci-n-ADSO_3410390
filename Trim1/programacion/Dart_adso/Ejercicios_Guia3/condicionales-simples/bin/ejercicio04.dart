@@ -15,8 +15,7 @@ double precioOriginal, precioConDescuento;
   precioOriginal = double.parse(stdin.readLineSync()!); 
 
   //Proceso
-  precioConDescuento = precioOriginal;
-  precioConDescuento = precioOriginal;
+  precioConDescuento = 0;
 
   if (clave == "1") {
     precioConDescuento = precioOriginal - (precioOriginal * 0.10);

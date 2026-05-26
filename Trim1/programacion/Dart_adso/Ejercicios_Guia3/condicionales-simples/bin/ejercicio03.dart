@@ -4,7 +4,7 @@ void main(List<String> arguments) {
 stdout.writeln("Ejercicio 3 - Condicionales Simples");
 
 String modelo;
-double precioUnitario, cantidadOrden, descuento;
+double precioUnitario, cantidadOrden, descuento, precioTotal;
 
   //Entrada
   stdout.write("Ingrese el modelo del traje: ");
@@ -15,14 +15,14 @@ double precioUnitario, cantidadOrden, descuento;
   cantidadOrden = double.parse(stdin.readLineSync()!);
 
   //Proceso
-  precioUnitario = precioUnitario * cantidadOrden;
+  precioTotal = precioUnitario*cantidadOrden;
   descuento = 0;
 
   if (cantidadOrden >= 3) {
-    descuento = precioUnitario * 0.17;
+    descuento = precioTotal * 0.17;
   }
-  precioUnitario = precioUnitario - descuento;
+  precioTotal = precioTotal - descuento;
   
   //Salida
-  print("El total a pagar es de: \$$precioUnitario" );
+  print("El total a pagar del traje $modelo sera de: \$$precioUnitario" );
 }

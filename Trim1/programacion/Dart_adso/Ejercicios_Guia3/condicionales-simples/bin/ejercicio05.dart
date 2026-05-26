@@ -12,7 +12,7 @@ double precioTotal = 0;
 
   //Proceso
   if (cantidadLlantas >= 5) {
-    precioTotal = cantidadLlantas * 70000;
+    precioTotal = cantidadLlantas * 70.000;
   }
 
   if (cantidadLlantas < 5) {
