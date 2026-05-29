@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Biografía</title>
+    <link rel="stylesheet" href="../css/main.css">
+
+    <style>
+
+        /* RESET */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        .main{
+            width: 80%;
+            margin: 20px auto;
+            border: 2px solid black;
+            padding: 20px;
+            background-color: white;
+        }
+
+        /* HEADER */
+        .header{
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* CONTENIDO */
+        .content{
+            padding: 20px;
+        }
+
+        /* CAJAS */
+        .biografia,
+        .hobbies,
+        .tabla,
+        .links{
+            border: 1px solid #999;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        /* TABLA */
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td{
+            border: 1px solid black;
+        }
+
+        th{
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        th, td{
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* LINKS */
+        a{
+            color: blue;
+            text-decoration: none;
+        }
+
+        a :hover{
+            color: red;
+        }
+
+        /* FOOTER */
+        .footer{
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .hobbies li{
+            margin-left: 2rem;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <!-- HEADER -->
+        <div class="header">
+            <h1>Mi Biografía</h1>
+            <p>Conociendo un poco sobre mí</p>
+        </div>
+
+        <!-- CONTENIDO -->
+        <div class="content">
+
+            <!-- BIOGRAFÍA -->
+            <div class="biografia">
+                <h2>¿Quién soy?</h2>
+
+                <p>
+                    Hola, mi nombre es Esteban Quiceno. Soy estudiante de ADSO en el SENA,
+                    y actualmente estoy aprendiendo HTML y CSS. Me gusta la tecnología,
+                    los videojuegos y aprender cosas nuevas.
+                </p>
+            </div>
+
+            <!-- LISTAS -->
+            <div class="hobbies">
+                <h2>Mis hobbies</h2>
+
+                <ul>
+                    <li>Jugar videojuegos</li>
+                    <li>Escuchar música</li>
+                    <li>Jugar fútbol</li>
+                    <li>Ver películas</li>
+                </ul>
+
+                <br>
+
+                <h2>Metas</h2>
+
+                <ol>
+                    <li>Aprender HTML</li>
+                    <li>Aprender CSS</li>
+                    <li>Aprender JavaScript</li>
+                    <li>Ser desarrollador web</li>
+                </ol>
+            </div>
+
+            <!-- TABLA -->
+            <div class="tabla">
+                <h2>Información personal</h2>
+
+                <table>
+                    <tr>
+                        <th>Dato</th>
+                        <th>Información</th>
+                    </tr>
+
+                    <tr>
+                        <td>Nombre</td>
+                        <td>Esteban Quiceno</td>
+                    </tr>
+
+                    <tr>
+                        <td>Edad</td>
+                        <td>17 años</td>
+                    </tr>
+
+                    <tr>
+                        <td>Ciudad</td>
+                        <td>Manizales</td>
+                    </tr>
+
+                    <tr>
+                        <td>Carrera</td>
+                        <td>ADSO</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- LINKS -->
+            <div class="links">
+                <h2>Mis redes o páginas favoritas</h2>
+
+                <p>
+                    Visita mi red favorita:
+                    <a href="https://www.instagram.com" target="_blank">
+                        Instagram
+                    </a>
+                </p>
+
+                <p>
+                    También puedes aprender programación en:
+                    <a href="https://www.Youtube.com" target="_blank">
+                        Youtube
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p>Creado por Esteban Quiceno - 2026</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+```
