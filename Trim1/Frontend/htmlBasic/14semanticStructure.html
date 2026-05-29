@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        * {
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            width: 90%;
+            header {
+                border: 1px solid #000;
+                background-color: antiquewhite;
+            }
+
+            section {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid #0009;
+                border-radius: unset;
+                background-color: burlywood;
+                width: 100%;
+                margin: 1rem 0;
+                
+            }
+
+            footer {
+                border: 1px solid #0009;
+                background-color: beige;
+            }
+            
+
+        }
+        aside{
+            border: 2px solid #0009;
+            padding: 1rem 0;
+            background-color: aquamarine;
+            width: 30%;
+            text-align: center;
+        } article{
+            border: 2px solid #0009;
+            padding: 1rem 0;
+            background-color: aquamarine;
+            width: 70%;
+            text-align: center;
+        }
+
+        header,
+        nav,
+        aside,
+        footer {
+            font-size: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        section {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>14. Estructura Semantica HTML5</h1>
+        <p>Generación de estructura moderna, utilizando las etiquetas de HTML 5 para realización del maquetado</p>
+    </header>
+
+    <section>
+        <main>
+            <header>
+                <h1>Titulo encabezado</h1>
+                <nav>Menú navegación</nav>
+            </header>
+            <section>
+                <article>Contenido del article</article>
+                <aside>Contenido aside</aside>
+            </section>
+            <footer>Contenido footer</footer>
+        </main>
+    </section>
+</body>
+
+</html>
