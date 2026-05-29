@@ -1,10 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Biografía</title>
-    <link rel="stylesheet" href="../css/main.css">
 
     <style>
 
@@ -53,6 +54,16 @@
             margin-top: 20px;
             border-radius: 10px;
             background-color: #f9f9f9;
+            transition: 0.3s;
+        }
+
+        /* EFECTO HOVER */
+        .biografia:hover,
+        .hobbies:hover,
+        .tabla:hover,
+        .links:hover{
+            background-color: #e8f5e9;
+            transform: scale(1.01);
         }
 
         /* TABLA */
@@ -62,7 +73,9 @@
             margin-top: 10px;
         }
 
-        table, th, td{
+        table,
+        th,
+        td{
             border: 1px solid black;
         }
 
@@ -71,7 +84,8 @@
             color: white;
         }
 
-        th, td{
+        th,
+        td{
             padding: 10px;
             text-align: center;
         }
@@ -80,9 +94,10 @@
         a{
             color: blue;
             text-decoration: none;
+            font-weight: bold;
         }
 
-        a :hover{
+        a:hover{
             color: red;
         }
 
@@ -94,8 +109,17 @@
             padding: 15px;
             margin-top: 20px;
         }
+
+        /* LISTAS */
         .hobbies li{
             margin-left: 2rem;
+            margin-top: 5px;
+        }
+
+        /* AUDIO */
+        audio{
+            width: 100%;
+            margin-top: 20px;
         }
 
     </style>
@@ -119,14 +143,16 @@
                 <h2>¿Quién soy?</h2>
 
                 <p>
-                    Hola, mi nombre es Esteban Quiceno. Soy estudiante de ADSO en el SENA,
-                    y actualmente estoy aprendiendo HTML y CSS. Me gusta la tecnología,
-                    los videojuegos y aprender cosas nuevas.
+                    Hola, mi nombre es Esteban Quiceno. Soy estudiante de ADSO en el SENA
+                    y actualmente estoy aprendiendo HTML y CSS.
+                    Me gusta la tecnología, los videojuegos
+                    y aprender cosas nuevas.
                 </p>
             </div>
 
             <!-- LISTAS -->
             <div class="hobbies">
+
                 <h2>Mis hobbies</h2>
 
                 <ul>
@@ -138,7 +164,7 @@
 
                 <br>
 
-                <h2>Metas</h2>
+                <h2>Mis metas</h2>
 
                 <ol>
                     <li>Aprender HTML</li>
@@ -146,13 +172,16 @@
                     <li>Aprender JavaScript</li>
                     <li>Ser desarrollador web</li>
                 </ol>
+
             </div>
 
             <!-- TABLA -->
             <div class="tabla">
+
                 <h2>Información personal</h2>
 
                 <table>
+
                     <tr>
                         <th>Dato</th>
                         <th>Información</th>
@@ -177,11 +206,14 @@
                         <td>Carrera</td>
                         <td>ADSO</td>
                     </tr>
+
                 </table>
+
             </div>
 
             <!-- LINKS -->
             <div class="links">
+
                 <h2>Mis redes o páginas favoritas</h2>
 
                 <p>
@@ -191,12 +223,30 @@
                     </a>
                 </p>
 
+                <br>
+
                 <p>
                     También puedes aprender programación en:
-                    <a href="https://www.Youtube.com" target="_blank">
-                        Youtube
+                    <a href="https://www.youtube.com" target="_blank">
+                        YouTube
                     </a>
                 </p>
+
+            </div>
+
+            <!-- AUDIO -->
+            <div class="links">
+
+                <h2>Sonido de Introduccion 👌</h2>
+
+                <audio
+                    src="../videos y audios/Audio02.mp3"
+                    controls
+                    autoplay
+                    muted
+                    loop>
+                </audio>
+
             </div>
 
         </div>
@@ -209,5 +259,5 @@
     </div>
 
 </body>
+
 </html>
-```
