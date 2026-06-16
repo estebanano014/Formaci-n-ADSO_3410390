@@ -1,32 +1,33 @@
 import 'dart:io';
 
 void main(List<String> arguments) {
-  double numero;
-  int valorFinal;
-  String entradaDatos;
-  double suma=0; //Variable de tipo acumulador
-  for (var i = 0; i < valorFinal; i++) {
-    print("Ingrese el número:");
-    numero = double.parse(stdin.readLineSync()!);
-    suma += numero;
-  }
-  print("La suma de los números ingresados es: $suma");
-  //Calcular el promedio de los numeros ingresados
-  double promedio = suma / valorFinal;
-  print("El promedio de los números ingresados es: $promedio");
-  //Calcular el numero mayor y menor de los numeros ingresados
+  print("¿Cuántos números desea ingresar?");
+  int valorFinal = int.parse(stdin.readLineSync()!);
+
+  double suma = 0;
   double numeroMayor = double.negativeInfinity;
   double numeroMenor = double.infinity;
-  for (var i = 0; i < valorFinal; i++) {
-    print("Ingrese el número:");
-    numero = double.parse(stdin.readLineSync()!);
+
+  for (int i = 0; i < valorFinal; i++) {
+    print("Ingrese el número ${i + 1}:");
+    double numero = double.parse(stdin.readLineSync()!);
+
+    suma += numero;
+
     if (numero > numeroMayor) {
       numeroMayor = numero;
     }
+
     if (numero < numeroMenor) {
       numeroMenor = numero;
     }
   }
+
+  double promedio = suma / valorFinal;
+
+  print("\nResultados:");
+  print("La suma de los números ingresados es: $suma");
+  print("El promedio de los números ingresados es: $promedio");
   print("El número mayor ingresado es: $numeroMayor");
   print("El número menor ingresado es: $numeroMenor");
 }
