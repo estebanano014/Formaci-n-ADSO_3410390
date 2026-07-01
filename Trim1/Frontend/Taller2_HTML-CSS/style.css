@@ -1,56 +1,188 @@
-/* Estilos generales */
+/* 14. Google Fonts - Aplicar la fuente a toda la página */
 body {
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
+    padding-left: 300px; /* Esto es para el menú lateral (punto 19) */
 }
 
-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+/* 15. Barra de Navegación con Flexbox */
+nav ul {
+    display: flex;              /* Pone los elementos en horizontal */
+    justify-content: space-between; /* Los separa con espacio entre cada uno */
+    list-style: none;           /* Quita los puntitos de la lista */
+    background-color: #ecf0f1;  /* Color de fondo gris claro */
+    padding: 15px;              /* Espacio interno */
 }
 
-/* Contenedor de tarjetas */
+/* 20. Estilos para los enlaces de navegación */
+nav ul li a {
+    color: #2c3e50;            /* Color del texto */
+    font-weight: 500;          /* Grosor de la fuente */
+    text-decoration: none;     /* Quita el subrayado */
+    padding: 8px 15px;         /* Espacio interno */
+}
+
+/* 20. Cuando el mouse pasa por encima o se usa el teclado */
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #3498db; /* Fondo azul */
+    color: white;              /* Texto blanco */
+    text-decoration: underline; /* Aparece subrayado */
+    transition: 0.3s;          /* Animación suave de 0.3 segundos */
+}
+
+/* 16. Tarjetas de Producto - Contenedor */
 .contenedor-tarjetas {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    /* Las tarjetas en columna (una debajo de otra) */
+    gap: 20px;                /* Espacio entre tarjetas */
 }
 
+/* 16. Cada tarjeta */
+.tarjeta {
+    display: flex;
+    flex-direction: column;    /* Elementos en columna (título, imagen, texto, botón) */
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;    /* Borde gris */
+    border-radius: 10px;       /* Esquinas redondeadas */
+}
+
+/* 16. Imagen de la tarjeta */
 .tarjeta img {
-    height: 200px;
-    width: 100px;
-    object-fit: cover;
+    height: 200px;             /* Alto fijo */
+    width: 100%;              /* Ancho completo */
+    object-fit: cover;        /* La imagen se recorta sin deformarse */
+    border-radius: 8px;
 }
 
-/* GALERÍA CSS GRID */
+/* 16. Botón siempre abajo */
+.tarjeta button {
+    margin-top: auto;         /* Empuja el botón hacia abajo */
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;          /* Manita al pasar el mouse */
+}
+
+/* 20. Efecto hover en botones */
+.tarjeta button:hover,
+.tarjeta button:focus {
+    background-color: #27ae60; /* Color más oscuro */
+    transition: 0.3s;          /* Animación suave */
+}
+
+/* 17. Galería con CSS Grid */
 .galeria {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 30px;
+    grid-template-columns: 1fr;  /* 1 columna por defecto (para móviles) */
+    gap: 15px;                  /* Espacio entre imágenes */
+    margin: 20px 0;
 }
 
-.contenedor-imagen {
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.contenedor-imagen img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
-}
-
+/* 18. Media Query - Cuando la pantalla sea más ancha que 768px */
 @media (min-width: 768px) {
     .galeria {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
     }
 }
 
+/* 17. Estilo de las imágenes de la galería */
+.contenedor-imagen img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;        /* Imagen sin deformar */
+    border-radius: 8px;
+}
+
+/* 19. Menú Lateral Fijo */
 .menu-lateral {
-    height: 100vh;
+    position: fixed;          /* Se queda fijo al hacer scroll */
+    top: 0;                   /* Pegado arriba */
+    left: 0;                  /* Pegado a la izquierda */
+    width: 230px;             /* Ancho del menú */
+    height: 100vh;            /* Alto completo de la pantalla */
+    background-color: #2c3e50; /* Fondo oscuro */
+    color: white;
+    padding: 20px;
+}
+
+/* 19. Estilos del menú lateral */
+.menu-lateral ul {
+    list-style: none;         /* Quita los puntitos */
+    padding: 0;
+}
+
+.menu-lateral ul li {
+    margin-bottom: 10px;      /* Espacio entre cada opción */
+}
+
+.menu-lateral ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+/* 20. Efecto hover en menú lateral */
+.menu-lateral ul li a:hover,
+.menu-lateral ul li a:focus {
+    background-color: #34495e; /* Fondo más claro */
+    transition: 0.3s;
+}
+
+/* Contenido principal (para que no se esconda detrás del menú) */
+.contenido-principal {
+    padding: 20px;
+}
+
+/* 22. Formulario - Campos ocupan todo el ancho */
+form input,
+form textarea {
+    width: 100%;              /* Ocupa todo el ancho disponible */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+/* 22. Cuando el usuario está escribiendo en el campo */
+form input:focus,
+form textarea:focus {
+    border-color: #3498db;    /* Borde azul */
+    outline: none;            /* Quita el borde por defecto del navegador */
+}
+
+/* 21. Etiquetas del formulario en bloque */
+form label {
+    display: block;           /* Cada label en su propia línea */
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* 22. Botón del formulario */
+form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* 20. Efecto hover en botón del formulario */
+form button:hover,
+form button:focus {
+    background-color: #2980b9;
+    transition: 0.3s;
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
 }
