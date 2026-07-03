@@ -1,0 +1,24 @@
+#caja-principal {
+    background-color: black;
+    color: black;
+}
+
+h3 {
+    color: aliceblue;
+    margin: 0 3rem 0 3rem;
+}
+
+.caja-secundaria{
+    border: 2px solid blue;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.tarjeta{
+    padding: 20px;
+    margin: 15px;
+}
+body{
+    margin: 0 3rem 0 3rem;
+    
+}
