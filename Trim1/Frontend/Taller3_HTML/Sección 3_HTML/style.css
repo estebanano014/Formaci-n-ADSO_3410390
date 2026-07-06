@@ -1,0 +1,8 @@
+h1{
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+main{
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
