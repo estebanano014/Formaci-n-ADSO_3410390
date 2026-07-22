@@ -1,12 +1,12 @@
 /* Barra de navegación */
-ul{
+ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
     padding: 0;
 }
 
-nav a{
+nav a {
     color: violet;
     font-weight: bold;
     text-decoration: none;
@@ -15,13 +15,12 @@ nav a{
 }
 
 nav a:hover,
-nav a:focus{
+nav a:focus {
     background-color: lightblue;
     text-decoration: underline;
 }
 
-
-button{
+button {
     padding: 10px 20px;
     background-color: lightblue;
     border: none;
@@ -30,12 +29,14 @@ button{
 }
 
 button:hover,
-button:focus{
+button:focus {
     background-color: deepskyblue;
     transform: scale(1.05);
 }
 
-.contenedor-tarjetas{
+
+/* Tarjetas */
+.contenedor-tarjetas {
     display: flex;
     justify-content: space-around;
     gap: 20px;
@@ -43,7 +44,7 @@ button:focus{
     margin: 20px;
 }
 
-.tarjeta{
+.tarjeta {
     width: 300px;
     padding: 15px;
     border: 1px solid #ccc;
@@ -51,35 +52,35 @@ button:focus{
     text-align: center;
 }
 
-.tarjeta img{
+.tarjeta img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
 /* Galería (Mobile First) */
-.galeria{
+.galeria {
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
     margin: 30px;
 }
 
-.galeria img{
+.galeria img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
 /* Media Query para pantallas de 768px o más */
-@media (min-width: 768px){
-    .galeria{
+@media (min-width: 768px) {
+    .galeria {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 /* Menú lateral */
-.menu-lateral{
+.menu-lateral {
     position: fixed;
     top: 0;
     left: 0;
@@ -90,7 +91,7 @@ button:focus{
 }
 
 /* Formulario */
-form{
+form {
     width: 100%;
     max-width: 500px;
     margin: 30px auto;
@@ -99,14 +100,14 @@ form{
     border-radius: 8px;
 }
 
-form label{
+form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
 form input,
-form textarea{
+form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -117,12 +118,16 @@ form textarea{
 
 /* Estado de enfoque (focus) */
 form input:focus,
-form textarea:focus{
+form textarea:focus {
     border: 2px solid blue;
     outline: none;
 }
 
 /* Botón del formulario */
-form button{
+form button {
     width: 100%;
+
 }
+
+}
+
