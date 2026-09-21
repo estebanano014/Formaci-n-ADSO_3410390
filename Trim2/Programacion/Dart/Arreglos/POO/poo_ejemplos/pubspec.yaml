@@ -1,5 +1,5 @@
-name: template_console_simple
-description: A sample command-line application.
+name: poo_ejemplos
+description: A simple command-line application.
 version: 1.0.0
 # repository: https://github.com/my_org/my_repo
 
@@ -12,4 +12,3 @@ dependencies:
 
 dev_dependencies:
   lints: ^5.0.0
-  test: ^1.24.0
